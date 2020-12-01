@@ -1,18 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div>aaa</div>
+    <s-list :columns="columns" :rows="rows" :showPager="true"></s-list>
+    <!-- <s-button></s-button>
+    <BeeGridTable
+      :columns="columns"
+      :data="rows"
+      :showPager="true"
+    ></BeeGridTable> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "App",
-  components: {
-    HelloWorld
-  }
+  data() {
+    return {
+      columns: [
+        {
+          title: "Name",
+          key: "name",
+        },
+        {
+          title: "Age",
+          key: "age",
+        },
+        {
+          title: "Street",
+          key: "street",
+        },
+        {
+          title: "Salary",
+          key: "salary",
+        },
+      ],
+      rows: [],
+    };
+  },
 };
 </script>
 
